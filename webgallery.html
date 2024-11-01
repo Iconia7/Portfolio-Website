@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.jpeg" alt="Logo" class="avatar">
+            </div>
+            <h1 class="site-title">NEWTON'S PORTFOLIO</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+   <section class="gallery">
+    <h2>Image Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openModal('img/sample1.jpg')"><img src="img/sample1.jpg" alt="Sample Image 1"></div>
+        <div class="gallery-item" onclick="openModal('img/sample2.jpg')"><img src="img/sample2.jpg" alt="Sample Image 2"></div>
+        <div class="gallery-item" onclick="openModal('img/sample3.jpg')"><img src="img/sample3.jpg" alt="Sample Image 3"></div>
+        <div class="gallery-item" onclick="openModal('img/sample4.jpg')"><img src="img/sample4.jpg" alt="Sample Image 4"></div>
+        <div class="gallery-item" onclick="openModal('img/sample5.jpg')"><img src="img/sample5.jpg" alt="Sample Image 5"></div>
+        <div class="gallery-item" onclick="openModal('img/sample6.jpg')"><img src="img/sample6.jpg" alt="Sample Image 6"></div>
+        <div class="gallery-item" onclick="openModal('img/sample7.jpg')"><img src="img/sample7.jpg" alt="Sample Image 7"></div>
+        <div class="gallery-item" onclick="openModal('img/sample8.jpg')"><img src="img/sample8.jpg" alt="Sample Image 8"></div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Modal for displaying larger image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Modal Image">
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Services</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> Email: mwanginewton239@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +254115332870</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a> | 
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a> | 
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+function openModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    modal.style.display = "block"; // Show the modal
+    modalImage.src = imageSrc; // Set the source of the modal image
+}
+
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none"; // Hide the modal
+}
+
+// Close the modal when clicking anywhere outside of the image
+window.onclick = function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+</script>
+<!-- Link to your JS file if needed -->
+</body>
+</html>

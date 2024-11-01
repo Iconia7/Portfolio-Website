@@ -1,0 +1,301 @@
+/* Title Style */
+.site-title {
+    color: #fff; /* Title color */
+    font-size: 24px; /* Font size */
+    margin-left: 20px; /* Space between logo and title */
+    font-weight: bold; /* Make the title bold */
+    align-self: center; /* Center the title vertically in the header */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    background-color: #e05514; /* Main header color */
+    padding: 20px 0; /* Space around header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* Position for dropdown if needed */
+}
+
+.logo img.avatar {
+    height: 50px; /* Logo height */
+    width: 50px; /* Logo width */
+    border-radius: 50%; /* Circular logo */
+    transition: transform 0.3s ease; /* Scale effect on hover */
+}
+
+.logo img.avatar:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox layout for navigation */
+}
+
+nav ul li {
+    margin-left: 20px; /* Spacing between menu items */
+}
+
+nav ul li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    padding: 10px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+    background-color: #e87740; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+/* Slider Styles */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slides img {
+    width: 100%;
+    height: 80vh; /* Adjust height to half of the viewport height */
+    object-fit: cover; /* Ensures the image is cropped nicely if needed */
+    display: block;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.services h2 {
+    color: #e05514;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Background for service item */
+    border-radius: 8px; /* Rounded corners */
+    width: 80%;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    width: 45%; /* Set width of images */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.service-item .service-text {
+    width: 50%; /* Width of text section */
+    padding: 0 20px; /* Padding around text */
+}
+
+.service-item h3 {
+    color: #e05514; /* Color for service headings */
+    margin: 10px 0; /* Margin for headings */
+}
+
+/* Button Styles */
+.sample-button {
+    background-color: #e05514; /* Same color as the navigation bar */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.sample-button:hover {
+    background-color: #e87740; /* Slightly lighter on hover */
+}
+
+/* Alternating Layout */
+.service-item.reverse {
+    flex-direction: row-reverse; /* Reverse layout */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    padding: 40px 0; /* Padding for footer */
+    display: flex; /* Flexbox for footer layout */
+    justify-content: space-around; /* Space out footer columns */
+}
+
+footer a {
+    color: #fff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    color: #e87740; /* Change link color on hover */
+}
+
+.footer-column ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-column ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-column p {
+    margin: 5px 0; /* Margin for paragraphs */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack container items */
+        align-items: flex-start; /* Align to the start */
+    }
+    
+    .service-item,
+    .service-item.reverse {
+        flex-direction: column; /* Stack service items vertically */
+    }
+    
+    .service-item img,
+    .service-item .service-text {
+        width: 100%; /* Full width on smaller screens */
+    }
+    
+    .footer-column {
+        width: 100%; /* Full width for footer columns */
+        padding-bottom: 20px; /* Padding for footer columns */
+    }
+}
+.gallery {
+    padding: 40px 0;
+    text-align: center; /* Center align the title */
+}
+
+.gallery h2 {
+    color: #e05514; /* Title color */
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 0 20px; /* Padding around the grid */
+}
+
+.gallery-item img {
+    width: 100%; /* Full width for images */
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s; /* Transition for scaling */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Width of the image */
+    max-width: 700px; /* Max width of the image */
+    height: auto; /* Auto height */
+}
+
+.close {
+    position: absolute; /* Position the close button */
+    top: 20px; /* 20px from the top */
+    right: 35px; /* 35px from the right */
+    color: #fff; /* White color for the close button */
+    font-size: 40px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: 0.3s; /* Smooth transition */
+}
+
+.close:hover,
+.close:focus {
+    color: #e87740; /* Change color on hover/focus */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+/* Education Section */
+.education {
+    text-align: center; /* Center the text */
+    padding: 40px 0; /* Padding for the section */
+    background-color: #fff; /* Background color for the section */
+}
+
+.education h2 {
+    color: #e05514; /* Heading color */
+    margin-bottom: 20px; /* Margin below the heading */
+}
+
+.education-item {
+    margin: 20px auto; /* Margin for each education item */
+    padding: 20px; /* Padding for each item */
+    background-color: #f9f9f9; /* Background color for items */
+    border-radius: 8px; /* Rounded corners */
+    width: 80%; /* Width of the education item */
+}
+/* Footer Styles */
+footer {
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    padding: 40px 0; /* Padding for footer */
+    display: flex; /* Flexbox for footer layout */
+    justify-content: space-around; /* Space out footer columns */
+    flex-direction: column; /* Stack footer items vertically */
+    align-items: center; /* Center items */
+}
+
+.copyright {
+    text-align: center; /* Center the copyright text */
+    margin-top: 20px; /* Space above the copyright section */
+    padding: 10px 0; /* Padding around the copyright text */
+    width: 100%; /* Full width */
+    background-color: #222; /* Darker background for copyright */
+}
+
+
